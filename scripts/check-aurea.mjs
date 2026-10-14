@@ -16,7 +16,7 @@ const partners=read('app/partners/page.tsx');
 assert(trip.includes('<RequestForm kind="trip"/>'));
 assert(partners.includes('<RequestForm kind="partner"/>'));
 const form=read('app/discovery.tsx');
-assert(form.includes("selected.length===0"));
+assert(form.includes("required={kind==='trip'&&!selected.length}"));
 assert(form.includes('AUREA'));
 const lead=read('app/api/leads/route.ts');
 assert(lead.includes('d.interests'));
